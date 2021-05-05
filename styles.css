@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: hsl(0, 100%, 74%);
+    background-image: url(./images/bg-intro-mobile.png);
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.input-container {
+    position: relative;
+}
+
+.icon-error {
+    display: none;
+    position: absolute;
+    top: 6px;
+    right: 10px;
+}
+
+.noti {
+    display: none;
+    position: relative;
+    margin: 5px;
+    bottom: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    font-style: italic;
+    color: red;
+    text-align: right;
+}
+
+input, button {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+input {
+    color: black;
+    border: 1px solid hsl(246, 25%, 77%);
+}
+    input::placeholder {
+        font-weight: 700;
+    }
+
+button {
+    border: 2px solid hsl(154, 70%, 46%);
+    background-color: hsl(154, 59%, 51%);
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+button:active {
+    background-color: hsl(154, 52%, 57%);
+}
+
+.container {
+    width: 80%;
+}
+
+.introduction, .promotion {
+    text-align: center;
+    color: white;
+}
+
+.promotion, .register {
+    border-radius: 10px;
+}
+
+.promotion {
+    border: 2px solid hsl(248, 32%, 49%);
+    background-color: hsl(248, 32%, 49%);
+    margin: 50px 0px 30px 0px;
+    box-shadow: 0px 8px rgba(0, 0, 0, 0.1);
+}
+
+.register {
+    background-color: white;
+    border: 2px solid white;
+    padding: 30px;
+    box-shadow: 0px 8px rgba(0, 0, 0, 0.2);
+}
+
+#note {
+    font-size: 10px;
+    text-align: center;
+    margin-bottom: 0px;
+    color: hsl(246, 25%, 77%);
+}
+
+@media screen and (min-width: 992px) {
+    body {
+        background-image: url(./images/bg-intro-desktop.png);
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .introduction {
+        position: relative;
+        top: 50px;
+        grid-row: 2/3;
+        grid-column: 1/2;
+        text-align: left;
+    }
+
+    .promotion {
+        grid-row: 1/2;
+        grid-column: 2/3;
+    }
+
+    .register {
+        grid-row: 2/3;
+        grid-column: 2/3;
+    }
+
+    footer {
+        position: relative;
+        top: 60px;
+    }
+
+}
